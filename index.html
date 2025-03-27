@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baizonn Learning Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        /* Header */
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav ul li a:hover {
+            color: #f97316;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('横幅/1200x400');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .cta-btn {
+            background: #f97316;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .cta-btn:hover {
+            background: #ea580c;
+        }
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            color: #1e3a8a;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .about, .programs, .schedule, .teachers, .testimonials {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .video-grid, .teacher-grid, .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+        .teacher-card, .testimonial-card {
+            text-align: center;
+        }
+        .teacher-card img, .open-house img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+        th {
+            background: #1e3a8a;
+            color: white;
+        }
+        /* Footer */
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        footer a {
+            color: #f97316;
+            text-decoration: none;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Baizonn Learning Center</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="#open-house">Open House</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Baizonn Learning Center</h1>
+        <p>Building Strong Foundations in Maths and Science since 2013</p>
+        <a href="#open-house" class="cta-btn">Join Our Open House</a>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Founded in 2013, Baizonn Learning Center believes in establishing a <strong>Strong Foundation</strong> built on grasping Maths and Science principles. Our F.A.S.T. approach (Firm Foundation, Apply, Surpass, Top) empowers students from Primary to Junior College to excel.</p>
+            <div class="video-grid">
+                <iframe src="https://www.youtube.com/watch?v=igcoDFokKzU" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/wHpqlBWtnPc" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="programs">
+            <h2>Our Programs</h2>
+            <ul>
+                <li><strong>Primary School:</strong> Mathematics, Science, PSLE Prep</li>
+                <li><strong>Secondary School:</strong> Sec 1-4 Maths & Science, GCE 'O' Levels</li>
+                <li><strong>Junior College:</strong> GCE 'A' Levels Maths & Science</li>
+            </ul>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="schedule">
+            <h2>2025 Schedule & Promotions</h2>
+            <table>
+                <tr><th>Subjects</th><th>Weekdays</th><th>Weekends</th></tr>
+                <tr><td>Primary 3-6 Science ($100/month)</td><td>Mon/Wed/Fri, 4-6pm, 7-9pm</td><td>Sat/Sun, 8-10am, 1-3pm</td></tr>
+                <tr><td>Secondary 1-2 Maths ($150/month)</td><td>Tue/Thu, 4-6pm, 7-9pm</td><td>Sat/Sun, 10am-12pm, 4-6pm</td></tr>
+                <tr><td>JC 1-2 Science ($250/month)</td><td>Mon/Wed/Fri, 4-6pm, 7-9pm</td><td>Sat/Sun, 8-10am, 1-3pm</td></tr>
+            </table>
+            <p><strong>Promotions (Before May 1, 2025):</strong> 5% off for 2 subjects, 10% off for 3 subjects.</p>
+        </section>
+
+        <!-- Teachers Section -->
+        <section id="teachers" class="teachers">
+            <h2>Our Passionate Teachers</h2>
+            <div class="teacher-grid">
+                <div class="teacher-card">
+                    <img src="图片1/200" alt="Ms Siti">
+                    <h3>Ms Siti</h3>
+                    <p>Bachelor in Science, 8 Years Experience</p>
+                </div>
+                <div class="teacher-card">
+                    <img src="图片2/200" alt="Ms Jennifer Chen">
+                    <h3>Ms Jennifer Chen</h3>
+                    <p>Masters in Education, 6 Years Experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <h2>What Parents Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Baizonn has provided more exposure for Glen. The teachers are patient and supportive." - Mdm Sharon Koo</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Natalie learned beyond textbooks. The teachers are encouraging!" - Mr Ben Tan</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open House Section -->
+        <section id="open-house" class="open-house">
+            <h2>Open House 2025</h2>
+            <p><strong>Date:</strong> 12th April 2025, 10am-6pm</p>
+            <p><strong>Book Now:</strong> <a href="mailto:BaizonnLearning@gmail.com">BaizonnLearning@gmail.com</a> or call +65 62811816</p>
+            <p>Free T-Shirt for confirmed students!</p>
+            <img src="图片3/300" alt="Baizonn T-Shirt">
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Contact Us: <a href="mailto:BaizonnLearning@gmail.com">BaizonnLearning@gmail.com</a> | Hotline: (+65) 62811816</p>
+        <p>Address: 1007A Upper Serangoon Road</p>
+    </footer>
+</body>
+</html>

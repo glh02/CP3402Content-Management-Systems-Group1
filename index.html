@@ -51,7 +51,7 @@
         }
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('横幅/1200x400');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner/1200x400');
             background-size: cover;
             color: white;
             text-align: center;
@@ -91,7 +91,7 @@
             margin-bottom: 1rem;
             text-align: center;
         }
-        .about, .programs, .schedule, .teachers, .testimonials {
+        .about, .programs, .schedule, .teachers, .testimonials, .awards, .open-house, .registration {
             background: white;
             padding: 2rem;
             border-radius: 8px;
@@ -110,7 +110,7 @@
         .teacher-card, .testimonial-card {
             text-align: center;
         }
-        .teacher-card img, .open-house img {
+        .teacher-card img, .open-house img, .awards img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
@@ -128,6 +128,44 @@
         th {
             background: #1e3a8a;
             color: white;
+        }
+        /* Registration Form */
+        .registration form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .registration form .full-width {
+            grid-column: span 2;
+        }
+        .registration form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .registration form input, .registration form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .registration form textarea {
+            height: 100px;
+        }
+        .registration form button {
+            background: #1e3a8a;
+            color: white;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            grid-column: span 2;
+        }
+        .registration form button:hover {
+            background: #f97316;
         }
         /* Footer */
         footer {
@@ -152,6 +190,12 @@
             .hero p {
                 font-size: 1rem;
             }
+            .registration form {
+                grid-template-columns: 1fr;
+            }
+            .registration form .full-width, .registration form button {
+                grid-column: span 1;
+            }
         }
     </style>
 </head>
@@ -165,7 +209,10 @@
                 <li><a href="#programs">Programs</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#teachers">Teachers</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#open-house">Open House</a></li>
+                <li><a href="#registration">Register</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -185,7 +232,7 @@
             <h2>About Us</h2>
             <p>Founded in 2013, Baizonn Learning Center believes in establishing a <strong>Strong Foundation</strong> built on grasping Maths and Science principles. Our F.A.S.T. approach (Firm Foundation, Apply, Surpass, Top) empowers students from Primary to Junior College to excel.</p>
             <div class="video-grid">
-                <iframe src="https://www.youtube.com/watch?v=igcoDFokKzU" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/igcoDFokKzU" allowfullscreen></iframe>
                 <iframe src="https://www.youtube.com/embed/wHpqlBWtnPc" allowfullscreen></iframe>
             </div>
         </section>
@@ -206,8 +253,13 @@
             <table>
                 <tr><th>Subjects</th><th>Weekdays</th><th>Weekends</th></tr>
                 <tr><td>Primary 3-6 Science ($100/month)</td><td>Mon/Wed/Fri, 4-6pm, 7-9pm</td><td>Sat/Sun, 8-10am, 1-3pm</td></tr>
+                <tr><td>Primary 3-6 Maths ($100/month)</td><td>Mon/Wed/Fri, 4-6pm, 7-9pm</td><td>Sat/Sun, 8-10am, 1-3pm</td></tr>
+                <tr><td>Secondary 1-2 Science ($150/month)</td><td>Tue/Thu, 4-6pm, 7-9pm</td><td>Sat/Sun, 10am-12pm, 4-6pm</td></tr>
                 <tr><td>Secondary 1-2 Maths ($150/month)</td><td>Tue/Thu, 4-6pm, 7-9pm</td><td>Sat/Sun, 10am-12pm, 4-6pm</td></tr>
+                <tr><td>Secondary 3-4 Science ($200/month)</td><td>Tue/Thu, 4-6pm, 7-9pm</td><td>Sat/Sun, 10am-12pm, 4-6pm</td></tr>
+                <tr><td>Secondary 3-4 Maths ($200/month)</td><td>Tue/Thu, 4-6pm, 7-9pm</td><td>Sat/Sun, 10am-12pm, 4-6pm</td></tr>
                 <tr><td>JC 1-2 Science ($250/month)</td><td>Mon/Wed/Fri, 4-6pm, 7-9pm</td><td>Sat/Sun, 8-10am, 1-3pm</td></tr>
+                <tr><td>JC 1-2 Maths ($250/month)</td><td>Mon/Wed/Fri, 4-6pm, 7-9pm</td><td>Sat/Sun, 8-10am, 1-3pm</td></tr>
             </table>
             <p><strong>Promotions (Before May 1, 2025):</strong> 5% off for 2 subjects, 10% off for 3 subjects.</p>
         </section>
@@ -217,27 +269,73 @@
             <h2>Our Passionate Teachers</h2>
             <div class="teacher-grid">
                 <div class="teacher-card">
-                    <img src="图片1/200" alt="Ms Siti">
+                    <img src="teacher1/200" alt="Ms Siti">
                     <h3>Ms Siti</h3>
                     <p>Bachelor in Science, 8 Years Experience</p>
+                    <p>Ms Siti engages children with knowledge and fun in Smart Science Lab, encouraging them to express themselves and grow.</p>
                 </div>
                 <div class="teacher-card">
-                    <img src="图片2/200" alt="Ms Jennifer Chen">
+                    <img src="teacher2/200" alt="Ms Jennifer Chen">
                     <h3>Ms Jennifer Chen</h3>
                     <p>Masters in Education, 6 Years Experience</p>
+                    <p>Ms Jennifer uses interactive approaches to convey complex concepts, making learning engaging.</p>
+                </div>
+                <div class="teacher-card">
+                    <img src="teacher3/200" alt="Mr Gao Tian">
+                    <h3>Mr Gao Tian</h3>
+                    <p>Bachelor in Science, 8 Years Experience</p>
+                    <p>Mr Gao combines coding skills with a nurturing approach to inspire a passion for learning.</p>
+                </div>
+                <div class="teacher-card">
+                    <img src="teacher4/200" alt="Mr Roland Kenny">
+                    <h3>Mr Roland Kenny</h3>
+                    <p>Masters in Business Administration, 11 Years Experience</p>
+                    <p>Mr Roland empowers students with discipline and encouragement, leading to better grades.</p>
+                </div>
+                <div class="teacher-card">
+                    <img src="teacher5/200" alt="Mr Peter John">
+                    <h3>Mr Peter John</h3>
+                    <p>Bachelor in Science, 9 Years Experience</p>
+                    <p>Mr Peter's interactive classes bring laughter while imparting key exam techniques.</p>
+                </div>
+                <div class="teacher-card">
+                    <img src="teacher6/200" alt="Ms Yati">
+                    <h3>Ms Yati</h3>
+                    <p>Masters in Education, 7 Years Experience</p>
+                    <p>Ms Yati has helped many students achieve their learning goals with her vast experience.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Academic Partner & Awards Section -->
+        <section id="awards" class="awards">
+            <h2>Academic Partner & Awards</h2>
+            <p><strong>Academic Partner:</strong> National Instruments - Academic Channel Partner for S.T.E.M.</p>
+            <p><strong>Award:</strong> Baizonn Learning Center won the National Instruments Engineering Impact Awards ASEAN/ANZ Regional Contest in 2016 for “A Smart Recirculating Aquaculture System with NI CompactRIO and WSN”.</p>
+            <img src="awards/300" alt="Award Image">
+        </section>
+
         <!-- Testimonials Section -->
         <section id="testimonials" class="testimonials">
-            <h2>What Parents Say</h2>
+            <h2>What Parents & Students Say</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p>"Baizonn has provided more exposure for Glen. The teachers are patient and supportive." - Mdm Sharon Koo</p>
+                    <p>"Baizonn has provided more exposure for Glen. The teachers are patient and supportive." - Mdm Sharon Koo, Glen's mother (Secondary 3)</p>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Natalie learned beyond textbooks. The teachers are encouraging!" - Mr Ben Tan</p>
+                    <p>"Natalie learned beyond textbooks. The teachers are encouraging!" - Mr Ben Tan, Natalie's father (Primary 5)</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Baizonn promotes curiosity in Saifu and boosts his confidence in math. Teacher Ms Yati is excellent!" - Mdm Yani, Saifu's mother (Secondary 2)</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Baizonn expanded my learning circle. The hands-on activities kept me interested in Science." - Owen Tan ZhiHao (Primary 6)</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Baizonn helped me achieve AL1 in all subjects for PSLE. Teachers are engaging and motivating!" - Sophie Huang XiaoLi (Primary 6)</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Baizonn built my son's confidence and helped him excel in PSLE. The tutors are dedicated!" - Mdm Melanie Tan, Ethan Phua's mother</p>
                 </div>
             </div>
         </section>
@@ -247,8 +345,44 @@
             <h2>Open House 2025</h2>
             <p><strong>Date:</strong> 12th April 2025, 10am-6pm</p>
             <p><strong>Book Now:</strong> <a href="mailto:BaizonnLearning@gmail.com">BaizonnLearning@gmail.com</a> or call +65 62811816</p>
-            <p>Free T-Shirt for confirmed students!</p>
-            <img src="图片3/300" alt="Baizonn T-Shirt">
+            <p>Buffet lunch provided (Halal & vegetarian options available). Free T-Shirt for confirmed students!</p>
+            <img src="t-shirt/300" alt="Baizonn T-Shirt">
+        </section>
+
+        <!-- Registration Section -->
+        <section id="registration" class="registration">
+            <h2>Register Now</h2>
+            <form>
+                <div>
+                    <label for="full-name">Full Name*</label>
+                    <input type="text" id="full-name" required>
+                </div>
+                <div>
+                    <label for="contact-number">Contact Number*</label>
+                    <input type="tel" id="contact-number" required>
+                </div>
+                <div class="full-width">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="school">Your School</label>
+                    <input type="text" id="school">
+                </div>
+                <div>
+                    <label for="grade">Your Grade</label>
+                    <input type="text" id="grade">
+                </div>
+                <div class="full-width">
+                    <label for="class-interested">Class Interested</label>
+                    <input type="text" id="class-interested">
+                </div>
+                <div class="full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message"></textarea>
+                </div>
+                <button type="submit">SEND</button>
+            </form>
         </section>
     </div>
 

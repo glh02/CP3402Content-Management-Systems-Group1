@@ -51,7 +51,7 @@
         }
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner/1200x400');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/Signboard\ 2.jpg');
             background-size: cover;
             color: white;
             text-align: center;
@@ -110,7 +110,28 @@
         .teacher-card, .testimonial-card {
             text-align: center;
         }
-        .teacher-card img, .open-house img, .awards img {
+        .teacher-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto 1rem;
+        }
+        .awards img {
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+        margin: 1rem auto;
+        }
+        .awards-image-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        }
+        .open-house img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
@@ -269,37 +290,37 @@
             <h2>Our Passionate Teachers</h2>
             <div class="teacher-grid">
                 <div class="teacher-card">
-                    <img src="teacher1/200" alt="Ms Siti">
+                    <img src="./images/Teacher Ms Siti.png" alt="Ms Siti">
                     <h3>Ms Siti</h3>
                     <p>Bachelor in Science, 8 Years Experience</p>
                     <p>Ms Siti engages children with knowledge and fun in Smart Science Lab, encouraging them to express themselves and grow.</p>
                 </div>
                 <div class="teacher-card">
-                    <img src="teacher2/200" alt="Ms Jennifer Chen">
+                    <img src="./images/Teacher Ms Jennifer Chen.png" alt="Ms Jennifer Chen">
                     <h3>Ms Jennifer Chen</h3>
                     <p>Masters in Education, 6 Years Experience</p>
                     <p>Ms Jennifer uses interactive approaches to convey complex concepts, making learning engaging.</p>
                 </div>
                 <div class="teacher-card">
-                    <img src="teacher3/200" alt="Mr Gao Tian">
+                    <img src="./images/Teacher Mr Gao Tian.png" alt="Mr Gao Tian">
                     <h3>Mr Gao Tian</h3>
                     <p>Bachelor in Science, 8 Years Experience</p>
                     <p>Mr Gao combines coding skills with a nurturing approach to inspire a passion for learning.</p>
                 </div>
                 <div class="teacher-card">
-                    <img src="teacher4/200" alt="Mr Roland Kenny">
+                    <img src="./images/Teacher Mr Roland Kenny.png" alt="Mr Roland Kenny">
                     <h3>Mr Roland Kenny</h3>
                     <p>Masters in Business Administration, 11 Years Experience</p>
                     <p>Mr Roland empowers students with discipline and encouragement, leading to better grades.</p>
                 </div>
                 <div class="teacher-card">
-                    <img src="teacher5/200" alt="Mr Peter John">
+                    <img src="./images/Teacher Mr Peter John.png" alt="Mr Peter John">
                     <h3>Mr Peter John</h3>
                     <p>Bachelor in Science, 9 Years Experience</p>
                     <p>Mr Peter's interactive classes bring laughter while imparting key exam techniques.</p>
                 </div>
                 <div class="teacher-card">
-                    <img src="teacher6/200" alt="Ms Yati">
+                    <img src="./images/Teacher Mdm Yati.png" alt="Ms Yati">
                     <h3>Ms Yati</h3>
                     <p>Masters in Education, 7 Years Experience</p>
                     <p>Ms Yati has helped many students achieve their learning goals with her vast experience.</p>
@@ -312,7 +333,11 @@
             <h2>Academic Partner & Awards</h2>
             <p><strong>Academic Partner:</strong> National Instruments - Academic Channel Partner for S.T.E.M.</p>
             <p><strong>Award:</strong> Baizonn Learning Center won the National Instruments Engineering Impact Awards ASEAN/ANZ Regional Contest in 2016 for “A Smart Recirculating Aquaculture System with NI CompactRIO and WSN”.</p>
-            <img src="awards/300" alt="Award Image">
+            <div class="awards-image-container">
+                <img src="./images/Award 1.jpg" alt="Award Image 1">
+                <img src="./images/Award 2.jpg" alt="Award Image 2">
+                <img src="./images/Award 3.jpg" alt="Award Image 2">
+            </div>
         </section>
 
         <!-- Testimonials Section -->
@@ -346,7 +371,7 @@
             <p><strong>Date:</strong> 12th April 2025, 10am-6pm</p>
             <p><strong>Book Now:</strong> <a href="mailto:BaizonnLearning@gmail.com">BaizonnLearning@gmail.com</a> or call +65 62811816</p>
             <p>Buffet lunch provided (Halal & vegetarian options available). Free T-Shirt for confirmed students!</p>
-            <img src="t-shirt/300" alt="Baizonn T-Shirt">
+            <img src="./images/T-Shirt.png" alt="Baizonn T-Shirt">
         </section>
 
         <!-- Registration Section -->
